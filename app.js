@@ -5,9 +5,7 @@ var handlebars = require('express-handlebars').create({ defaultLayout:'main' });
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 
-app.use(express.static(__dirname + '/public')); 
-
-app.use('/img', express.static(__dirname + '/public')); 
+app.use(express.static('public')); 
 
 // --- routes --- //
 
